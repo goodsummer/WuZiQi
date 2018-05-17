@@ -38,7 +38,7 @@ public class Game
       {
          printChessBoard();
          changeNextPlayer();
-         chessSeq --;
+         chessSeq ++;
       }
       else
       {
