@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Thu May 17 10:53:22 CST 2018
+onejar.license.required=true
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=wuziqi.jar
+manifest.mergeall=true
+manifest.mainclass=test.Game
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=
+includes=
