@@ -327,7 +327,8 @@ public class Game
  
    public static void main(String[] args)
    {
-      Game game = new Game("未命名", "未命名");
+      Game game = new Game("未命名", "未命名");  
+      game.printChessBoard();
       
       Scanner scan = new Scanner(System.in);
       while(scan.hasNext())
@@ -348,7 +349,6 @@ public class Game
             }
             catch(Exception e)
             {
-               e.printStackTrace();
                System.out.println("输入有误！重新输入吧");
             }   
          }          
