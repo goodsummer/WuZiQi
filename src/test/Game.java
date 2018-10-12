@@ -23,15 +23,12 @@ public class Game
    
    public void addChess(int x, int y)
    {
-      for (Chess chess : chessList)
+      if (board[x][y] != null)
       {
-         if (chess.getX() == x && chess.getY() == y)
-         {
-            System.out.println("这个地方已经有棋子了，换个地方吧");
-            return;
-         }
-      }   
-      
+         System.out.println("这个地方已经有棋子了，换个地方吧");
+         return;
+      }
+ 
       board[x][y] = nextChessPlayer.addChess(chessSeq, x, y, chessList);
 
       if (!isGameOver(board[x][y]))
@@ -61,14 +58,7 @@ public class Game
 
    private void changeNextPlayer()
    {
-      if (nextChessPlayer == blackChessPlayer)
-      {
-         nextChessPlayer = whiteChessPlayer;
-      }
-      else
-      {
-         nextChessPlayer = blackChessPlayer;
-      }
+      nextChessPlayer = nextChessPlayer == blackChessPlayer ? whiteChessPlayer : blackChessPlayer;
    }
 
    private boolean isGameOver(Chess chess)
